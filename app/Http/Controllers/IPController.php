@@ -51,11 +51,12 @@ class IPController extends Controller
      // When accessing /api/ipms/v1 with GET
     public function show(IP $iP, Request $request)
     {
-      $mockResponse = json_encode([
-        "IPAddress"=>"10.1.1.1",
-      ]);
-
-      echo $mockResponse;
+      // Save client's IP address to the database
+      $clientIP = new IP;
+      $clientIP->IPAddress = $request->ip();
+      $clientIP->save();
+      // Return the client's IP address
+      echo json_encode(["IPAddress"=> $request->ip()]);
     }
 
     /**

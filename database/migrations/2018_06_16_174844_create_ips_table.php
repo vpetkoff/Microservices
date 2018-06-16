@@ -13,7 +13,7 @@ class CreateIPsTable extends Migration
      */
     public function up()
     {
-        Schema::create('i_ps', function (Blueprint $table) {
+        Schema::create('ips', function (Blueprint $table) {
             $table->increments('id');
             $table->text('IPAddress');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateIPsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('i_ps');
+        Schema::dropIfExists('ips');
     }
 }
