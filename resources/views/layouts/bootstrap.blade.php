@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href={{ url('/apidoc1') }}>API 1 docs</a>
+            <a class="nav-link" href={{ url('/ipdocs') }}>IP API Docs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href={{ url('/apidoc2') }}>API 2 docs</a>

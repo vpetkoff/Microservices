@@ -12,10 +12,16 @@ class IPController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+      $mockResponse = json_encode([
+        "IPAddress"=>"10.1.1.1",
+      ]);
+
+      echo $mockResponse;
     }
+
+
 
     /**
      * Show the form for creating a new resource.

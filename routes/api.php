@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Group routes for IP microservice
+Route::prefix('ipms')->group(function () {
+  // Group IP microservice's routes by version
+  Route::prefix('v1')->group(function () {
+    Route::get('/', 'IPController@index');
+  });
+});
