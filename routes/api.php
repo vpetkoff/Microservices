@@ -21,6 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('ipms')->group(function () {
   // Group IP microservice's routes by version
   Route::prefix('v1')->group(function () {
-    Route::get('/', 'IPController@index');
+    Route::get('/', 'IPController@show');
   });
 });

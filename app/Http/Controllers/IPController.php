@@ -12,13 +12,10 @@ class IPController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+     // When accessing /ipmsdocs with GET
+    public function index()
     {
-      $mockResponse = json_encode([
-        "IPAddress"=>"10.1.1.1",
-      ]);
-
-      echo $mockResponse;
+      return view('ipms.index');
     }
 
 
@@ -50,9 +47,15 @@ class IPController extends Controller
      * @param  \App\IP  $iP
      * @return \Illuminate\Http\Response
      */
-    public function show(IP $iP)
+
+     // When accessing /api/ipms/v1 with GET
+    public function show(IP $iP, Request $request)
     {
-        //
+      $mockResponse = json_encode([
+        "IPAddress"=>"10.1.1.1",
+      ]);
+
+      echo $mockResponse;
     }
 
     /**
